@@ -17,16 +17,18 @@ public class MainActivity extends Activity {
         EditText inputNama = findViewById(R.id.inputNama);
         Button btnSapa = findViewById(R.id.btnSapa);
 
-        btnSapa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnSapa.setOnClickListener(v -> {
+            // Animasi membal (Fluid Scale)
+            v.animate().scaleX(0.95f).scaleY(0.95f).setDuration(100).withEndAction(() -> {
+                v.animate().scaleX(1f).scaleY(1f).setDuration(100).start();
+                
                 String nama = inputNama.getText().toString().trim();
                 if (nama.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Nama tidak boleh kosong!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Tulis namamu dulu ya", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "Halo, " + nama + "!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Halo, " + nama + "!", Toast.LENGTH_SHORT).show();
                 }
-            }
+            }).start();
         });
     }
 }
