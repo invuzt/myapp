@@ -4,36 +4,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:padding="32dp"
-    android:background="#FAFAFA">
+    android:padding="40dp"
+    android:background="#FDFDFD">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Halo! Siapa namamu?"
-        android:textSize="22sp"
-        android:textColor="#6200EE"
-        android:textStyle="bold"
-        android:layout_marginBottom="24dp" />
+        android:textSize="24sp"
+        android:textColor="#1C1B1F"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="-0.02"
+        android:layout_marginBottom="32dp" />
 
     <EditText
         android:id="@+id/inputNama"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:hint="Masukkan nama..."
         android:textSize="16sp"
-        android:padding="12dp"
-        android:background="#E8E0F0"
-        android:layout_marginBottom="16dp" />
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/bg_input"
+        android:layout_marginBottom="20dp"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/btnSapa"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:text="Sapa!"
-        android:backgroundTint="#6200EE"
-        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
         android:textSize="16sp"
-        android:padding="12dp" />
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_button"
+        android:elevation="0dp"
+        android:stateListAnimator="@null" />
 
 </LinearLayout>

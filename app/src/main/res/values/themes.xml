@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:colorPrimary">#6200EE</item>
-        <item name="android:colorAccent">#03DAC5</item>
-        <item name="android:windowBackground">#FAFAFA</item>
-        <item name="android:statusBarColor">#3700B3</item>
+    <style name="Theme.MyMinimalApp" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>
